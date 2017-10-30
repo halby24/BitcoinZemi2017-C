@@ -5,8 +5,11 @@ std::string pubkey(const std::string &secret_key) ;
 
 int main() {
     std::string secret = std::to_string(bc::pseudo_random());
+    std::cout << "Secret: ";
     std::cout << secret;
+    std::cout << "\nPublic: ";
     std::cout << pubkey(secret);
+    std::cout << "\n";
 
     return 0;
 }
