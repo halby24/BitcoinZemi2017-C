@@ -12,7 +12,9 @@ bool match_found(const std::string& address, std::string search);
 
 int main(int argc, char *argv[])
 {
-    auto search = (std::string) argv[0] || search;
+    std::string search = search;
+    if (argv[1]) search = (std::string) argv[1];
+    std::cout << search + "\n";
 
 	// random_device on Linux uses "/dev/urandom"
 	// CAUTION: Depending on implementation this RNG may not be secure enough!
